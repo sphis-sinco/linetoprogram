@@ -50,6 +50,9 @@ class LiopAssetManager
 
 	public static function getPackFile(pack:String):PackFile
 	{
+		if (!FileSystem.isDirectory('assets/' + pack))
+			return null;
+
 		var pack_file:String = 'assets/' + pack + '/' + PACK_FILENAME;
 
 		if (FileSystem.exists(pack_file))
