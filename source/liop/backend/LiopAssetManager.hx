@@ -28,13 +28,18 @@ class LiopAssetManager
 			{
 				Application.current.window.alert('Your asset pack is missing what is deemed as an important field: ' + field,
 					'Missing Asset Pack Field: ' + field);
-				continue;
 			}
 
 			if (parsed_pack_file.api_version == null)
+			{
 				missing_field('api_version');
+				continue;
+			}
 			if (parsed_pack_file.name == null)
+			{
 				missing_field('name');
+				continue;
+			}
 
 			ASSET_PACKS.push(pack);
 			ENABLED_ASSET_PACKS.push(pack);
