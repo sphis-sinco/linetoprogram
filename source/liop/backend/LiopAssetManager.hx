@@ -24,16 +24,22 @@ class LiopAssetManager
 			if (parsed_pack_file == null)
 				continue;
 
-			var missing_field = function(field:String) {
-				Application.current.window.alert('Your asset pack is missing what is deemed as an important field: ' + field, 'Missing Asset Pack Field: ' + field);
+			var missing_field = function(field:String)
+			{
+				Application.current.window.alert('Your asset pack is missing what is deemed as an important field: ' + field,
+					'Missing Asset Pack Field: ' + field);
 				continue;
 			}
 
-			if (parsed_pack_file.api_version == null) missing_field('api_version');
-			if (parsed_pack_file.name == null) missing_field('name');
+			if (parsed_pack_file.api_version == null)
+				missing_field('api_version');
+			if (parsed_pack_file.name == null)
+				missing_field('name');
 
 			ASSET_PACKS.push(pack);
 			ENABLED_ASSET_PACKS.push(pack);
+
+			trace('Successfully parsed pack: ' + pack);
 		}
 	}
 
