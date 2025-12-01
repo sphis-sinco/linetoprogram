@@ -1,8 +1,8 @@
-package;
+package liop;
 
 import flixel.FlxState;
 
-class PlayState extends FlxState
+class Init extends FlxState
 {
 	override public function create()
 	{
