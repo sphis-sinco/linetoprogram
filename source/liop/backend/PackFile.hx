@@ -4,6 +4,6 @@ typedef PackFile = {
     name:String,
     ?description:String,
 
-    api_version:Float,
-    ?pack_version:Float,
+    api_version:Null<Float>,
+    ?pack_version:Null<Float>,
 }
