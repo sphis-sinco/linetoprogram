@@ -1,5 +1,6 @@
 package liop;
 
+import liop.backend.PackManager;
 import liop.backend.LiopAssetManager;
 import flixel.FlxState;
 
@@ -9,7 +10,7 @@ class Init extends FlxState
 	{
 		super.create();
 
-		LiopAssetManager.getAllPacks();
+		PackManager.getAllPacks();
 	}
 
 	override public function update(elapsed:Float)
